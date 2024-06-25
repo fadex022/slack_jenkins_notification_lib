@@ -13,5 +13,5 @@ def call(String build_status = 'STARTED') {
 
   def msg = "${build_status}: `${env.JOB_NAME}` #${env.BUILD_NUMBER}:\n${env.BUILD_URL}"
 
-  slackSend(color: color, message: message)
+  slackSend(color: color, message: msg)
 }
